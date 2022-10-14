@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.video-cont {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(28, 29, 29);
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+/* buttons styling */
+.action-cont {
+    /* background-color: lightblue; */
+    height: 12rem;
+    width: 5rem;
+    position: absolute;
+    top: calc((100vh - 12rem)/2);
+    right: 5rem;
+    display: flex;
+    color: rgba(223, 221, 221, 0.884);
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+.action-cont>* {
+    width: 100%;
+    height: 5rem;
+    border-radius: 50%;
+    border: 3px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.capture-btn {
+    background-color: white;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.record-btn {
+    background-color: rgb(247, 54, 54);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.capture-btn:active,.record-btn:active{
+    opacity: 0.5;
+}
+
+/* animation for capture action btns */
+.scale-record{
+    animation-name: scale-record ;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+.scale-capture{
+    animation-name: scale-capture ;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes scale-record {
+    0%{
+        transform: scale(0.8);
+    }
+    
+    100%{
+        transform: scale(1.1);
+    }
+}
+@keyframes scale-capture {
+    0%{
+        transform: scale(0.8);
+    }
+    
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+/* timer styling */
+.timer-cont{
+    position: absolute;
+    top:10rem;
+    right: 5.2rem;
+    color: rgb(214, 213, 210);
+    font-size: 0.7rem;
+}
+.timer{
+    display: none;
+}
+
+/* Filter Container */
+.filter-cont{
+    /* background-color: aqua; */
+    height: 17rem;
+    width: 5rem;
+    position: absolute;
+    top: calc((100vh - 16rem) / 2);
+    left: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 5;
+}
+
+.filter{
+    cursor: pointer;
+    background-image: url('https://i.picsum.photos/id/277/200/300.jpg?hmac=8wIsJ0ZOFtBSrTpSE0M37XZG2dXMzDTL2_dgppOaP0Y');
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 4rem;
+    width: 100%;
+    
+}
+
+.orange{
+    background-color: #c3610469;
+    background-blend-mode: color-burn;
+}
+.brown{
+    background-color: #832b2b99;
+    background-blend-mode:  color-burn;
+}
+.pink{
+    background-color: #b13a7963;
+    background-blend-mode:  color-burn;
+}
+
+.filter-layer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+}
+
+/* gallery icon */
+
+.material-icons{
+    position: absolute;
+    right: 5rem;
+    bottom: 1.5rem;
+    color: rgb(216, 212, 212);
+    font-size: 4rem;
+    cursor: pointer;
+    z-index: 5;
+}

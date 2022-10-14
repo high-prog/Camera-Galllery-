@@ -1,0 +1,33 @@
+1) Video Recording:
+=> Browser APIs:
+-> Media Stream API
+        -> Navigator
+        ->Media Devices
+        -> Media Recorder
+        -> canvas
+        -> Indexed DB
+
+TO DO: 
+    -> Structuring(HTML + CSS) 
+    -> camera captures-> stream => displayed inside video element in HTML
+    -> video is available in chunks
+
+    ->Image Capturing
+    -> Filtering
+
+    => Gallery feature
+        -> Required Storage
+    -> Indexed DB Api (powerful than local Storage)
+        -> Client side Storage to store large volume of data
+        -> Event Driven and asynchronous
+        -> key value pairs {complex objects, videos, blobs, files can be stored}
+
+        to implement:
+            -> Factors:
+                1)open Database
+                    events=> 1. success
+                            2. error
+                            3. upgradeneeded
+                2)create objectStore (like tables in sql) (can only be opened in upgradeneeded)
+                    -> key Path = unique id for each unique data for identifiaction
+                    -> make transactions => to perform operations(add, remove )
